@@ -1,0 +1,2 @@
+# Your-Locality-Guide
+The technologies used are Oracle SQL, Struts Framework, HTML5, CSS and JavaScript. A full stack web application is developed and its purpose is to enable users to find the best possible options according to their liking from a wide variety of businesses like restaurants, entertainment etc. The application will also serve as an analytics tool that will help the business find trends and patterns of their ratings and popularity which will help them come up with better marketing strategies and ideas to improve their business.
