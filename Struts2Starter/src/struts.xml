@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation/DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+     
+<struts>
+<package name = "default" extends = "struts-default">
+<action name = "getTutorial" class = "org.charan.TutorialClas" > 
+<result name = "success"> /success.jsp</result>
+<result name = "failure"> /error.jsp</result>
+</action>
+
+<action name = "getInfo" class = "org.charan.BusinessInfo" method="getInfo">
+<result name = "successInfo"> /successInfo.jsp </result>
+<result name = "errorInfo"> /errorInfo.jsp </result>
+</action>
+
+<action name = "getReviewInfo" class = "org.charan.getReviewInfo" method="getInfo">
+<result name = "success"> /successReviewInfo.jsp </result>
+<result name = "error"> /sucessReviewInfo.jsp </result>
+</action>
+<action name = "getReviewerInfo" class = "org.charan.getReviewerInfo" method="getInfo">
+<result name = "success"> /successReviewerInfo.jsp </result>
+<result name = "error"> /sucessReviewerInfo.jsp </result>
+</action>
+<action name="getTop10Business" class = "org.charan.getTop10BusinessName" method="getInfo">
+<result name = "success"> /businesstrends.jsp </result>
+<result name = "error"> /businesstrends.jsp </result>
+</action>
+<action name = "getBusinessTrends" class = "org.charan.getBusinessTrends" method="getInfo">
+<result name = "success"> /successBusinessTrends.jsp </result>
+<result name = "error"> /sucessBusinessTrends.jsp </result>
+</action>
+<action name = "getTop10Cities" class = "org.charan.getTop10Cities" method="getInfo">
+<result name = "success"> /citiestrends.jsp </result>
+<result name = "error"> /citiestrends.jsp </result>
+</action>
+<action name = "getCitiesTrends" class = "org.charan.getCitiesTrends" method="getInfo">
+<result name = "success"> /successCitiesTrends.jsp </result>
+<result name = "error"> /successCitiesTrends.jsp </result>
+</action>
+</package>
+</struts>

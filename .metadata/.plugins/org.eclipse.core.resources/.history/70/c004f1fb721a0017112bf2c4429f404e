@@ -1,0 +1,28 @@
+<%@page import="org.json.*"%>
+<%@page import="java.util.*"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<% int num = (int)request.getAttribute("num"); %>
+<% String city = (String) request.getAttribute("city");%>
+<% String place = (String) request.getAttribute("place");%>
+We have found <%=num %> results for <%=place%> in the city <%=city %>
+<%
+JSONArray array = (JSONArray)request.getAttribute("array");
+		for(int i=0;i<array.length();i++)
+		{
+			JSONObject temp = array.getJSONObject(i);
+			String name = temp.get("name").toString();
+			String address = temp.get("address").toString();
+			String place = temp.get("place").toString();
+			float rating = temp.get("rating").toString();
+		}
+%>
+</body>
+</html>

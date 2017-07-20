@@ -1,0 +1,5 @@
+127.0.0.1 - - [11/Apr/2017:09:58:46 -0400] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [11/Apr/2017:09:58:48 -0400] "GET /Struts2Starter/ HTTP/1.1" 200 1266
+0:0:0:0:0:0:0:1 - - [11/Apr/2017:09:58:48 -0400] "GET /Struts2Starter/css/style.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [11/Apr/2017:09:58:48 -0400] "GET /Struts2Starter/images/background.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [11/Apr/2017:09:59:06 -0400] "GET /Struts2Starter/getTutorial?place=Bars&city=Carnegie HTTP/1.1" 200 1815

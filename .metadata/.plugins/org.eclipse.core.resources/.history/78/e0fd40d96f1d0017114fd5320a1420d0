@@ -1,0 +1,53 @@
+<%@page import="org.json.*"%>
+<%@page import="java.util.*"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" href="css/style.css" />
+<title>Insert title here</title>
+</head>
+		<div class="detailsContainer">
+				
+				<form class="text-center formbox" action="getTutorial">
+					<h2>Your Locality Guide</h2>
+					<input type="text" id="detailsRestaurant" placeholder="FIND Restaurants,Hotels,Bars" name = "place"/>			
+					<input type="text" id="detailsLocation" placeholder="CITY" name = "city"/>		
+					<input type="submit" value="submit"/>				
+				</form>		
+		</div>
+<% int num = (int)request.getAttribute("num");
+String city = (String) request.getAttribute("city");
+String plac = (String) request.getAttribute("place");%>
+<div class="contentbg">
+<div class="contentdetails">
+<br/>
+<br/>
+We have found <%=num %> results for <%=plac%> in the city <%=city %>
+<br/>
+<br/>		
+<%JSONArray array = (JSONArray)request.getAttribute("array");
+   for(int i=0;i<array.length();i++)
+   {
+		JSONObject temp = array.getJSONObject(i);
+		String name = temp.get("name").toString();
+		String address = temp.get("address").toString();
+		String place = temp.get("place").toString();
+		String rating = temp.get("rating").toString();
+        %>
+        <form action = "getInfo">
+       	<b><em><%=(i+1)%> :<a href="success.jsp?name=${name}"/> <%=name %></a></em></b>
+        </form> 
+         &nbsp &nbsp Rating: <b><em><%=rating%></em></b>
+        <br/>
+         &nbsp &nbsp Address: <b><em><%=address %> </em></b>
+        <br/>
+        <br/>
+	<% 
+	}
+	%>
+	</div>
+	</div>
+</html>

@@ -1,0 +1,70 @@
+body{
+	margin:0;
+}
+#welcomepage{
+	background: url(https://assets.awwwards.com/awards/images/2015/04/pattern.jpg) no-repeat scroll center center;
+    background-size: cover;
+}
+.container{
+	margin: 100px auto;
+    width: 980px;
+}
+.text-center{
+	text-align:center;
+}
+#searchLocation, #searchRestaurant, #detailsRestaurant, #detailsLocation{
+	border-radius: 25px;    height: 40px;
+    width: 40%;
+    margin: 50px auto;
+	border: 2px solid;
+	padding-left: 35px;
+}
+#detailsRestaurant, #detailsLocation{
+	margin: 0 auto;
+	width:25%;
+}
+.boxes{
+	width: 100%;
+    float: left;
+    clear: both;
+	margin:70px 0;
+}
+.box{
+	width: 30%;
+    border: 1px solid;
+    margin-right: 30px;
+    float: left;
+	box-sizing:border-box;
+	padding:10px;
+}
+.box p{
+	text-align:center;
+}
+.box p a{
+	color:black;
+}
+.box img{
+	width:100%;
+	height: 400px;
+}
+
+.detailsContainer{
+	padding: 30px 0;
+    background: url(../images/background.jpg) no-repeat scroll center center;
+    background-size: cover;
+}
+.formbox{
+	width:980px;
+	margin:0 auto;
+}
+.contentbg{
+	background-color:palegoldenrod;
+	    padding: 20px 0;
+}
+.contentdetails{
+	width:980px;
+	margin:0 auto;
+}
+li{
+	margin-bottom:20px;
+}
