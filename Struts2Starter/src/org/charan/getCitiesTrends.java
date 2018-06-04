@@ -20,7 +20,7 @@ public class getCitiesTrends {
 		
 		try{
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@oracle.cise.ufl.edu:1521:orcl","naveen","Sai0508r");
+		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@oracle.cise.ufl.edu:1521:orcl","naveen","");
 		Statement st=con.createStatement();
 		String sql="select * from (select avg(reviews.stars) as avg_rating,business.city from business,reviews where upper(business.name)=upper('"+name+"') and business.business_id=reviews.business_id group by business.city order by avg_rating asc) where rownum<11";
 		ResultSet rs=st.executeQuery(sql);
