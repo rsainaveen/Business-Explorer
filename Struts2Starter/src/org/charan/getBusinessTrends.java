@@ -20,7 +20,7 @@ public class getBusinessTrends {
 		
 		try{
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@oracle.cise.ufl.edu:1521:orcl","naveen","Sai0508r");
+		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@oracle.cise.ufl.edu:1521:orcl","naveen","");
 		Statement st=con.createStatement();
 		String sql="select avg(R.rating),r.year from (select reviews.business_id,reviews.stars as rating,TO_CHAR(reviews.REVIEW_DATE, 'MM') as year,business.name from reviews,business where business.business_id=reviews.BUSINESS_ID and Upper(business.name)=upper('"+name+"'))R group by r.year order by r.year";
 		ResultSet rs=st.executeQuery(sql);
