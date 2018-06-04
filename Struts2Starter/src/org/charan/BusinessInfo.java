@@ -24,7 +24,7 @@ public class BusinessInfo
 		JSONObject ob = new JSONObject();
 		try{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@oracle.cise.ufl.edu:1521:orcl","naveen","Sai0508r");
+			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@oracle.cise.ufl.edu:1521:orcl","naveen","");
 			
 			Statement st=con.createStatement();
 			System.out.println("connected to the server");
