@@ -26,7 +26,7 @@ public String execute()
 	int Count_tuples=0;
 	try{
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@oracle.cise.ufl.edu:1521:orcl","naveen","Sai0508r");
+		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@oracle.cise.ufl.edu:1521:orcl","naveen","");
 		Statement st=con.createStatement();
 		System.out.println("connected to the server");
 		String countQuery = "select sum(num_rows) from(select table_name, num_rows from user_tables)";
