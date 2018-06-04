@@ -20,7 +20,7 @@ public class getTop10BusinessName {
 		JSONArray jsonarray=new JSONArray();
 		try{
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@oracle.cise.ufl.edu:1521:orcl","naveen","Sai0508r");
+		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@oracle.cise.ufl.edu:1521:orcl","naveen","");
 		Statement st=con.createStatement();
 		String sql="select * from(select business.name,r.business_id,r.count from (select reviews.business_id,count(*) as count from reviews group by reviews.business_id)r,business where r.business_id=business.business_id order by r.count desc) where rownum<11";
 		ResultSet rs=st.executeQuery(sql);
