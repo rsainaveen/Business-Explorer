@@ -21,8 +21,8 @@ public String getInfo()
 	JSONArray jsonarray = new JSONArray();
 	try{
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-		Connection con1=DriverManager.getConnection("jdbc:oracle:thin:@oracle.cise.ufl.edu:1521:orcl","naveen","Sai0508r");
-		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@oracle.cise.ufl.edu:1521:orcl","aravi","Manunitedatz9");
+		Connection con1=DriverManager.getConnection("jdbc:oracle:thin:@oracle.cise.ufl.edu:1521:orcl","naveen","");
+		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@oracle.cise.ufl.edu:1521:orcl","aravi","");
 		Statement st=con.createStatement();
 		Statement st1=con1.createStatement();
 		System.out.println(id);
