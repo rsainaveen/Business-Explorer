@@ -21,7 +21,7 @@ public class getReviewerInfo {
 	public String getInfo(){
 	try{
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@oracle.cise.ufl.edu:1521:orcl","naveen","Sai0508r");
+		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@oracle.cise.ufl.edu:1521:orcl","naveen","");
 		Statement st=con.createStatement();
 		String sql="select nvl(compliments_plain,0)+nvl(compliments_cute,0)+nvl(compliments_writer,0)+nvl(compliments_note,0)+nvl(compliments_hot,0)+nvl(compliments_cool,0)+nvl(compliments_profile,0)+nvl(compliments_more,0)+nvl(compliments_list,0)+nvl(compliments_photos,0)+nvl(compliments_funny,0)as compliments,reviewing_since,REVIEW_COUNT,fans,VOTES_COOL,VOTES_FUNNY,VOTES_USEFUL,AVERAGE_STARS,name from reviewer where user_id='"+id+"'";
 		ResultSet rs=st.executeQuery(sql);
